@@ -1,0 +1,26 @@
+
+
+tinyArray
+	-insert (33.1 μs)
+	-append (98.7 μs)
+-----------------------------------------
+smallArray
+	-insert (42.8 μs)
+	-append (147.3 μs)
+-----------------------------------------
+mediumArray
+	-insert (217.7 μs)
+	-append (154.4 μs)
+-----------------------------------------
+largeArray
+	-insert (8.5754 ms)
+	-append (758.1 μs)
+-----------------------------------------
+ExtralargeArray
+	-insert (815.5995 ms)
+	-append (3.0627 ms)
+
+The append function takes more time to run than the insert function when running with a smaller array. By the time that there is an array size of 1000 the
+ append function scales better and runs faster than the insert. The insert function scales up rapidly when running larger arrays while the append scales up
+ at a much slower rate. The insert function is unshifting, meaning that it is adding to the begining of the array while also reassigning the index of every
+ number in the array. The append function is only push a new value to the end of an array and is not reassigning every value in the array.
